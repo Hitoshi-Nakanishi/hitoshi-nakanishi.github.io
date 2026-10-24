@@ -7,15 +7,11 @@ heading: About this notebook
 description: About Hitoshi Nakanishi and this notebook.
 ---
 
-This is a place to write down whatever I happen to be thinking about.
-
-Sometimes it turns into a proper essay; sometimes it stays a few lines of notes. Equations, diagrams and photos join in when they help.
+Notes on things I’ve been thinking about, sometimes with equations and figures.
 
 ## Who writes here
 
-**Hitoshi Nakanishi** — an equity long/short portfolio manager in Tokyo.
-
-I started in physics and followed my curiosity through machine learning, software and quantitative investing. What ends up here is whatever I was thinking about along the way.
+**Hitoshi Nakanishi** — equity long/short portfolio manager in Tokyo. My background is in physics (BSc, MSc) and machine learning (PhD).
 
 ## Now
 
