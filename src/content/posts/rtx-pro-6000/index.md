@@ -1,7 +1,7 @@
 ---
 title: 会社を辞めて RTX Pro 6000 と Memory を買った
 description: ローカルで LLM を動かすための環境構築でやったこと
-date: 2026-10-24
+date: 2026-10-24T11:22:19+09:00
 tags: [ローカルLLM, GPU]
 draft: true
 ---
