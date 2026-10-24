@@ -2,7 +2,7 @@
 
 個人ブログ。[Astro](https://astro.build) で作り、GitHub Pages で公開しています。
 
-書き方の見本は `src/content/posts/formatting-sample/`（`draft: true` なので公開されず、`npm run dev` のときだけ表示されます）。
+書き方の見本は記事「ノートで記録を始めている」（`src/content/posts/starting-notes/`）にあります。
 
 - Markdown で記事を書く
 - 数式（KaTeX）: `$...$` と `$$...$$`
