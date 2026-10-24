@@ -766,6 +766,13 @@ a:hover {
   letter-spacing: 0.6em;
 }
 
+.prose .note {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
 .prose img {
   display: block;
   max-width: 100%;
