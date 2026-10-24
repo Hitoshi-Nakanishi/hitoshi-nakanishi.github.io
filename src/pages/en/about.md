@@ -53,6 +53,22 @@ The University of Tokyo
 - [*Forrest Gump*](https://en.wikipedia.org/wiki/Forrest_Gump)
 - [*A Beautiful Mind*](https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film))
 
+### Restaurants
+
+- [Restaurante Carmen El Agua](https://www.google.com/maps/search/?api=1&query=Restaurante+Carmen+El+Agua+Placeta+del+Aljibe+de+Trillo+7+Granada) (Granada, Spain)
+- [Shisen Tantanmen Aun](https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%B7%9D%E6%8B%85%E6%8B%85%E9%BA%BA+%E9%98%BF%E5%90%BD+%E6%B9%AF%E5%B3%B6%E6%9C%AC%E5%BA%97) (Yushima, Tokyo)
+- [Kappo Shigeyuki](https://www.google.com/maps/search/?api=1&query=%E5%89%B2%E7%83%B9%E8%8C%82%E5%B9%B8+%E6%B8%8B%E8%B0%B7%E5%8C%BA%E8%A5%BF%E5%8E%9F2-17-3) (Yoyogi-Uehara, Tokyo)
+- [Gradska kavana Arsenal](https://www.google.com/maps/search/?api=1&query=Gradska+kavana+Arsenal+Pred+dvorom+1+Dubrovnik) (Dubrovnik, Croatia)
+- [Noble House](https://www.google.com/maps/place/Noble+House/@3.1449417,101.7201089,17z/data=!4m6!3m5!1s0x31cc3631be7c4645:0x4be607998ed9333b!8m2!3d3.1449417!4d101.7201089!16s%2Fg%2F1tfcqr2_) (Kuala Lumpur, Malaysia)
+- [Trishna](https://www.google.com/maps/place/Trishna/@18.9248435,72.8393365,15.54z/data=!4m6!3m5!1s0x3be7d13c1abc5e8d:0x35306f3e0fd872bb!8m2!3d18.9286299!4d72.8324035!16s%2Fg%2F11g_yh3yf9) (Mumbai, India)
+
+### Places I remember
+
+- [Nacpan Beach](https://www.google.com/maps/place/Nacpan+Beach/@11.3198128,119.4464417,15.19z/data=!4m6!3m5!1s0x33b70778b8e77e77:0x1ca10e91bef9c5e0!8m2!3d11.3211895!4d119.427758!16s%2Fg%2F12vt97dc3) (El Nido, Philippines)
+- [Sumilon Island Sand Bar](https://www.google.com/maps/place/Sumilon+Island+Sand+Bar/@9.4331631,123.3928304,16.31z/data=!4m6!3m5!1s0x33ab7478dc1a4499:0x74a26ec3c3fe12ca!8m2!3d9.434068!4d123.3867759!16s%2Fg%2F11gg3tlkfb) (Cebu, Philippines)
+- [Dispensa Italian Grocery](https://www.google.com/maps/place/Dispensa+Italian+Grocery/@45.4978866,-73.5550437,18z/data=!4m10!1m2!2m1!1sitalian!3m6!1s0x4cc91a5f251228df:0xc1e6461c38ffe117!8m2!3d45.4987434!4d-73.5572091!15sCgdpdGFsaWFuWgkiB2l0YWxpYW6SARVpdGFsaWFuX2dyb2Nlcnlfc3RvcmWaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUldNSFJEZFVWbkVBReABAPoBBAgxEEs!16s%2Fg%2F11cnc2q1_t) (Montreal, Canada)
+- [Morihico Coffee](https://www.google.com/maps/place/Morihico+Coffee/@43.0499974,141.3467392,14.28z/data=!4m9!1m2!2m1!1sitalian!3m5!1s0x5f0b29e9a0bbd7bd:0x482ccc3a7e34c6e1!8m2!3d43.0533077!4d141.3186089!16s%2Fg%2F1tvgv3s7) (Sapporo)
+
 ### Gardening
 
 - Lemon, blueberry, loquat, sansho (Japanese pepper) and wasabi
