@@ -49,8 +49,8 @@ npm run new -- "Post title" my-first-post --en
 ---
 title: 記事のタイトル
 description: 一覧に出る短い説明（省略可）
-date: 2026-10-24
-updated: 2026-10-25     # 省略可
+date: 2026-10-24T11:22:19+09:00   # 作成日時。npm run new が入れる。一覧はこの順に並ぶ
+updated: 2026-10-25     # 更新日（省略可）。記事ページに表示されるが、並び順は変わらない
 tags: [メモ, 数学]
 cover: ./cover.jpg      # 省略可。記事上部の大きな画像
 coverAlt: 画像の説明

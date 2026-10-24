@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { SITE } from './consts';
 import { DEFAULT_LANG, LANGS, otherLang, type Lang } from './i18n';
 
 export type Post = CollectionEntry<'posts'>;
@@ -15,7 +16,11 @@ export function postSlug(post: Post): string {
 
 export async function getPosts(lang: Lang): Promise<Post[]> {
   const posts = await getCollection('posts', (post) => isVisible(post) && postLang(post) === lang);
-  return posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  // Newest first by creation date only, so editing a post or setting `updated` never moves it.
+  // The slug breaks ties so the order does not depend on the order files are loaded in.
+  return posts.sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf() || postSlug(a).localeCompare(postSlug(b)),
+  );
 }
 
 export async function getPostPaths(lang: Lang) {
@@ -70,12 +75,20 @@ export function tagUrl(tag: string, lang: Lang): string {
   return url(`/tags/${tagSlug(tag)}/`, lang);
 }
 
-// Dates in frontmatter are calendar dates, so format in UTC to avoid shifting a day.
+// A bare date in frontmatter is midnight UTC, which is still the same day in the site's time zone.
+const ymd = new Intl.DateTimeFormat('en-CA', {
+  timeZone: SITE.timeZone,
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
 export function formatDate(date: Date): string {
-  const y = date.getUTCFullYear();
-  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const d = String(date.getUTCDate()).padStart(2, '0');
-  return `${y}.${m}.${d}`;
+  return ymd.format(date).replaceAll('-', '.');
+}
+
+export function postYear(date: Date): number {
+  return Number(formatDate(date).slice(0, 4));
 }
 
 export function readingMinutes(body = '', lang: Lang): number {

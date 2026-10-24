@@ -4,6 +4,8 @@ export const SITE = {
   author: 'Hitoshi Nakanishi',
   since: 2026,
   github: 'https://github.com/Hitoshi-Nakanishi',
+  // 記事の日付はこのタイムゾーンの暦日で表示します。
+  timeZone: 'Asia/Tokyo',
 };
 
 export const NAV = [

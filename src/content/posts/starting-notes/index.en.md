@@ -1,7 +1,7 @@
 ---
 title: Starting to keep notes here
 description: How this site is put together, and how to write posts for it
-date: 2026-10-24
+date: 2026-10-24T10:57:26+09:00
 tags: [this site]
 ---
 

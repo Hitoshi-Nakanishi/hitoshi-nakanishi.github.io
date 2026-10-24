@@ -12,6 +12,9 @@ const [title = en ? 'Untitled note' : '無題のメモ', slugArg] = args.filter(
 const now = new Date();
 const pad = (n) => String(n).padStart(2, '0');
 const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+const offset = -now.getTimezoneOffset();
+const zone = `${offset >= 0 ? '+' : '-'}${pad(Math.floor(Math.abs(offset) / 60))}:${pad(Math.abs(offset) % 60)}`;
+const created = `${today}T${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}${zone}`;
 
 const baseSlug =
   (slugArg ?? today)
@@ -32,7 +35,7 @@ writeFileSync(
   `---
 title: ${JSON.stringify(title)}
 description: ""
-date: ${today}
+date: ${created}
 tags: [${en ? 'notes' : 'メモ'}]
 draft: false
 ---
