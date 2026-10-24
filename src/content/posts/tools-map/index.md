@@ -37,7 +37,7 @@ QRX とは別に、このブログも公開しています。
 | Atlas | Web の画面 |
 | Athena | Atlas や Jupyter から呼ぶ API |
 | Titan | 市場をリアルタイムで監視する |
-| Orion | Titan の中にある、もうひとつの監視画面 |
+| Orion | Titan の中で、バスケットを管理する |
 | Helios | Titan に株価を届ける |
 | Clio | 分析内容のアーカイブ |
 | Fama | ニュースを要約する |
