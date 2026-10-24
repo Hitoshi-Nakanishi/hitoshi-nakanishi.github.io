@@ -35,8 +35,7 @@ The University of Tokyo
 
 ### Art and craft
 
-- Vincent van Gogh, [*Roses*](https://www.nga.gov/artworks/72328-roses) (1890, National Gallery of Art, Washington)
-- Vincent van Gogh, [*Roses*](https://www.metmuseum.org/art/collection/search/436534) (1890, The Metropolitan Museum of Art)
+- Vincent van Gogh, *Roses* (1890, [National Gallery of Art, Washington](https://www.nga.gov/artworks/72328-roses) and [The Metropolitan Museum of Art](https://www.metmuseum.org/art/collection/search/436534))
 - [Yohen tenmoku tea bowls](https://en.wikipedia.org/wiki/Tenmoku) (Southern Song dynasty, Jian kilns)
 
 ### Books

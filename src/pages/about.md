@@ -35,8 +35,7 @@ description: Hitoshi Nakanishi のプロフィール
 
 ### 美術・工芸
 
-- フィンセント・ファン・ゴッホ[『ばら』](https://www.nga.gov/artworks/72328-roses)（1890 年、ワシントン・ナショナル・ギャラリー）
-- フィンセント・ファン・ゴッホ[『ばら』](https://www.metmuseum.org/art/collection/search/436534)（1890 年、メトロポリタン美術館）
+- フィンセント・ファン・ゴッホ『ばら』（1890 年、[ワシントン・ナショナル・ギャラリー](https://www.nga.gov/artworks/72328-roses)と[メトロポリタン美術館](https://www.metmuseum.org/art/collection/search/436534)）
 - [曜変天目茶碗](https://ja.wikipedia.org/wiki/曜変天目)（南宋時代、建窯）
 
 ### 本
