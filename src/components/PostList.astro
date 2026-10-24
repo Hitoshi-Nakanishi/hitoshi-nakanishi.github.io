@@ -1,0 +1,37 @@
+---
+import { formatDate, postUrl, tagUrl, type Post } from '../utils';
+
+interface Props {
+  posts: Post[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ol class="post-list">
+  {
+    posts.map((post) => (
+      <li class="post-item">
+        <time class="post-item__date" datetime={post.data.date.toISOString()}>
+          {formatDate(post.data.date)}
+        </time>
+        <div class="post-item__body">
+          <h2 class="post-item__title">
+            <a href={postUrl(post)}>{post.data.title}</a>
+            {post.data.draft && <span class="badge">draft</span>}
+          </h2>
+          {post.data.description && <p class="post-item__desc">{post.data.description}</p>}
+          {post.data.tags.length > 0 && (
+            <ul class="tag-row">
+              {post.data.tags.map((tag) => (
+                <li>
+                  <a href={tagUrl(tag)}>#{tag}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ol>

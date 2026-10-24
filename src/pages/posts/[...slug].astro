@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDate, getPosts, postUrl, readingMinutes, tagUrl, type Post } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1] },
+  }));
+}
+
+interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+}
+
+const { post, newer, older } = Astro.props;
+const { Content } = await render(post);
+const { title, description, date, updated, tags, cover, coverAlt } = post.data;
+---
+
+<BaseLayout title={title} description={description} image={cover?.src} type="article">
+  <article class="post">
+    <header class="post-header">
+      <p class="post-meta">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {
+          updated && (
+            <span>
+              （更新 <time datetime={updated.toISOString()}>{formatDate(updated)}</time>）
+            </span>
+          )
+        }
+        <span aria-hidden="true">·</span>
+        <span>{readingMinutes(post.body)} 分で読めます</span>
+      </p>
+      <h1 class="post-title">{title}</h1>
+      {description && <p class="post-lede">{description}</p>}
+      {
+        tags.length > 0 && (
+          <ul class="tag-row tag-row--center">
+            {tags.map((tag) => (
+              <li>
+                <a href={tagUrl(tag)}>#{tag}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    {
+      cover && (
+        <figure class="post-cover">
+          <Image src={cover} alt={coverAlt ?? ''} widths={[720, 1200]} sizes="(max-width: 760px) 100vw, 720px" />
+        </figure>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <p class="ornament" aria-hidden="true">⁂</p>
+
+    <nav class="post-nav" aria-label="前後の記事">
+      {
+        older ? (
+          <a class="post-nav__link" href={postUrl(older)}>
+            <span class="post-nav__label">← 前の記事</span>
+            <span class="post-nav__title">{older.data.title}</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      {
+        newer && (
+          <a class="post-nav__link post-nav__link--next" href={postUrl(newer)}>
+            <span class="post-nav__label">次の記事 →</span>
+            <span class="post-nav__title">{newer.data.title}</span>
+          </a>
+        )
+      }
+    </nav>
+  </article>
+</BaseLayout>

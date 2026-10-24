@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { getPosts, url, type Post } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+  return tags.map((tag) => ({
+    params: { tag },
+    props: { posts: posts.filter((post) => post.data.tags.includes(tag)) },
+  }));
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout title={`#${tag}`} description={`「${tag}」タグの記事`}>
+  <header class="page-header">
+    <p class="page-kicker"><a href={url('/tags/')}>Tags</a></p>
+    <h1 class="page-title">#{tag}</h1>
+    <p class="page-sub">{posts.length} 本の記事</p>
+  </header>
+  <PostList posts={posts} />
+</BaseLayout>

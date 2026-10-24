@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { SITE } from '../consts';
+import { getPosts, toRoman } from '../utils';
+
+const posts = await getPosts();
+---
+
+<BaseLayout>
+  <section class="masthead">
+    <p class="masthead__est">Est. {toRoman(SITE.since)}</p>
+    <h1 class="masthead__title">{SITE.title}</h1>
+    <p class="masthead__tagline">{SITE.tagline}</p>
+    <div class="masthead__rule" aria-hidden="true"><span>✦</span></div>
+  </section>
+
+  {posts.length > 0 ? <PostList posts={posts} /> : <p class="empty">まだ記事はありません。</p>}
+</BaseLayout>

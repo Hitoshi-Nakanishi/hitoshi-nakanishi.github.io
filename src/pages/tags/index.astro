@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPosts, tagUrl } from '../../utils';
+
+const posts = await getPosts();
+const counts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+}
+const tags = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'));
+---
+
+<BaseLayout title="Tags" description="タグの一覧">
+  <header class="page-header">
+    <p class="page-kicker">Index</p>
+    <h1 class="page-title">タグ</h1>
+  </header>
+
+  <ul class="tag-cloud">
+    {
+      tags.map(([tag, count]) => (
+        <li>
+          <a href={tagUrl(tag)}>
+            #{tag}
+            <span class="tag-cloud__count">{count}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
