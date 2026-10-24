@@ -42,6 +42,11 @@ The University of Tokyo
 
 - Lemons and blueberries
 - [Akkeshi single malt whisky “Keichitsu”](https://akkeshi-distillery.com/brand/products.html#keichitu)
+- Sake: Hanamura from [Ryozeki Shuzo](https://ja.wikipedia.org/wiki/両関酒造), and [Hagi no Tsuyu “Shifuku”](https://www.haginotsuyu.co.jp/syuntoteiban/#shifuku)
+
+### Books
+
+- [*Never Let Me Go*](https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel)) by Kazuo Ishiguro
 
 ### Films
 

@@ -42,6 +42,11 @@ description: Hitoshi Nakanishi のプロフィール
 
 - レモン、ブルーベリー
 - [厚岸のシングルモルトウイスキー「啓蟄」](https://akkeshi-distillery.com/brand/products.html#keichitu)
+- 日本酒の、[両関酒造](https://ja.wikipedia.org/wiki/両関酒造)の「花邑」と、[萩乃露「至福」](https://www.haginotsuyu.co.jp/syuntoteiban/#shifuku)
+
+### 本
+
+- [カズオ・イシグロ『わたしを離さないで』](https://ja.wikipedia.org/wiki/わたしを離さないで)
 
 ### 映画
 
