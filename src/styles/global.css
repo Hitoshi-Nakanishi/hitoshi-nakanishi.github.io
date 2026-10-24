@@ -22,8 +22,8 @@
   --sans: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', ui-rounded, system-ui, sans-serif;
   --mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
 
-  --measure: 46rem;
-  --wide: 60rem;
+  --measure: clamp(46rem, 30rem + 20vw, 52rem);
+  --wide: 64rem;
   --gutter: clamp(1rem, 4vw, 2rem);
 
   color-scheme: light;
@@ -352,7 +352,8 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .still-life:hover .still-life__tail {
+  .still-life:hover .still-life__tail,
+  .vignette:hover .still-life__tail {
     animation: tail 1.2s ease-in-out infinite alternate;
   }
 }
@@ -511,6 +512,14 @@ main > .empty:first-child {
   text-decoration: none;
 }
 
+.post-item__title a:hover,
+.archive-list a:hover,
+.post-nav__link:hover .post-nav__title {
+  color: inherit;
+  text-decoration: underline wavy var(--accent) 1.5px;
+  text-underline-offset: 0.3em;
+}
+
 .post-item__desc {
   margin: 0.35rem 0 0;
   color: var(--ink-soft);
@@ -545,8 +554,8 @@ main > .empty:first-child {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem 0.9rem;
-  margin: 0.6rem 0 0;
+  gap: 0.4rem 0.45rem;
+  margin: 0.7rem 0 0;
   padding: 0;
   font-family: var(--sans);
   font-size: 0.78rem;
@@ -554,12 +563,18 @@ main > .empty:first-child {
 }
 
 .tag-row a {
-  color: var(--leaf);
+  display: inline-block;
+  padding: 0.05rem 0.65rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ground) 60%, transparent);
+  color: var(--ink-soft);
   text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .tag-row a:hover {
-  color: var(--accent);
+  background: var(--highlight);
+  color: var(--ink);
 }
 
 .tag-row--center {
@@ -576,6 +591,18 @@ main > .empty:first-child {
 .page-header {
   padding: clamp(3rem, 8vw, 4.5rem) 0 2.5rem;
   text-align: center;
+}
+
+.vignette {
+  display: block;
+  width: auto;
+  height: 6.5rem;
+  margin: -0.5rem auto 1.2rem;
+  overflow: visible;
+}
+
+.vignette--cat {
+  height: 4.6rem;
 }
 
 .page-kicker {
@@ -956,6 +983,14 @@ main > .empty:first-child {
 
 .prose pre.astro-code {
   background-color: var(--code-bg) !important;
+}
+
+@media (min-width: 60rem) {
+  .prose figure,
+  .prose pre {
+    width: min(var(--wide), 100vw - 6rem);
+    margin-left: calc(50% - min(var(--wide), 100vw - 6rem) / 2);
+  }
 }
 
 :root[data-theme='dark'] .astro-code span {

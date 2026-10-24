@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StillLife from '../components/StillLife.astro';
 import { ui, type Lang } from '../i18n';
 import { formatDate, getPosts, postUrl, postYear, type Post } from '../utils';
 
@@ -19,6 +20,7 @@ for (const post of posts) {
 
 <BaseLayout lang={lang} title="Archive" description={t.archiveDesc}>
   <header class="page-header">
+    <StillLife part="pots" />
     <p class="page-kicker">Archive</p>
     <h1 class="page-title">{t.archiveTitle}</h1>
     <p class="page-sub">{t.count(posts.length)}</p>
@@ -32,7 +34,10 @@ for (const post of posts) {
           {list.map((post) => (
             <li>
               <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date).slice(5)}</time>
-              <a href={postUrl(post)}>{post.data.title}</a>
+              <span>
+                <a href={postUrl(post)}>{post.data.title}</a>
+                {post.data.draft && <span class="badge">draft</span>}
+              </span>
             </li>
           ))}
         </ol>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StillLife from '../components/StillLife.astro';
 import { ui, type Lang } from '../i18n';
 import { getPosts, tagUrl } from '../utils';
 
@@ -19,6 +20,7 @@ const tags = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 
 
 <BaseLayout lang={lang} title="Tags" description={t.tagsDesc}>
   <header class="page-header">
+    <StillLife part="roses" />
     <p class="page-kicker">Index</p>
     <h1 class="page-title">{t.tagsTitle}</h1>
   </header>

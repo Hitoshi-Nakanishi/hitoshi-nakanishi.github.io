@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StillLife from '../components/StillLife.astro';
 import { url } from '../utils';
 ---
 
 <BaseLayout lang="ja" title="Not Found" alternate={url('/', 'en')}>
   <header class="page-header">
+    <StillLife part="cat" />
     <p class="page-kicker">404</p>
     <h1 class="page-title">ページが見つかりません</h1>
     <p class="page-sub" lang="en">Page not found.</p>

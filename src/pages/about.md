@@ -3,6 +3,7 @@ layout: ../layouts/PageLayout.astro
 lang: ja
 title: About
 kicker: About
+vignette: cat
 heading: Hitoshi Nakanishi
 description: Hitoshi Nakanishi のプロフィール
 ---

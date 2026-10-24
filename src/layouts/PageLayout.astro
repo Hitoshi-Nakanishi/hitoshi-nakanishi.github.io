@@ -1,11 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import StillLife from '../components/StillLife.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout lang={frontmatter.lang} title={frontmatter.title} description={frontmatter.description}>
   <header class="page-header">
+    {frontmatter.vignette && <StillLife part={frontmatter.vignette} />}
     {frontmatter.kicker && <p class="page-kicker">{frontmatter.kicker}</p>}
     <h1 class="page-title">{frontmatter.heading ?? frontmatter.title}</h1>
   </header>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostList from '../components/PostList.astro';
+import StillLife from '../components/StillLife.astro';
 import { otherLang, ui, type Lang } from '../i18n';
 import { url, type Post } from '../utils';
 
@@ -16,6 +17,7 @@ const t = ui[lang];
 
 <BaseLayout lang={lang} title={`#${tag}`} description={t.tagDesc(tag)} alternate={url('/tags/', otherLang(lang))}>
   <header class="page-header">
+    <StillLife part="roses" />
     <p class="page-kicker"><a href={url('/tags/', lang)}>Tags</a></p>
     <h1 class="page-title">#{tag}</h1>
     <p class="page-sub">{t.count(posts.length)}</p>
