@@ -84,10 +84,17 @@ The University of Tokyo
 
 - Gardening (lemon, blueberry, loquat, sansho, wasabi and 15 avocado plants)
 
+## About this blog
+
+I write about things I have been thinking about or looking into. The main topics are financial data analysis, local LLMs, GPUs and the tools I am building.
+
+Posts are written in Japanese and English. Some posts exist in only one of the two.
+
 ## Links
 
 - GitHub: [Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)
 - LinkedIn: [in/x37](https://www.linkedin.com/in/x37/)
+- RSS: [/en/rss.xml](/en/rss.xml)
 
 ---
 

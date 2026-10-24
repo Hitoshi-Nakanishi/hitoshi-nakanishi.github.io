@@ -84,10 +84,17 @@ description: Hitoshi Nakanishi のプロフィール
 
 - ガーデニング（レモン、ブルーベリー、びわ、山椒、わさび、アボカド 15 本）
 
+## このブログについて
+
+日々考えたことや調べたことを書いています。主な話題は、金融データの分析、ローカル LLM、GPU、自分で作っているツールです。
+
+記事は日本語と英語で書いています。片方の言語にしかない記事もあります。
+
 ## リンク
 
 - GitHub: [Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)
 - LinkedIn: [in/x37](https://www.linkedin.com/in/x37/)
+- RSS: [/rss.xml](/rss.xml)
 
 ---
 
