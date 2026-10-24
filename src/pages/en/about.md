@@ -3,15 +3,11 @@ layout: ../../layouts/PageLayout.astro
 lang: en
 title: About
 kicker: About
-heading: About this notebook
-description: About Hitoshi Nakanishi and this notebook.
+heading: Hitoshi Nakanishi
+description: About Hitoshi Nakanishi
 ---
 
-Notes on things I’ve been thinking about, sometimes with equations and figures.
-
-## Who writes here
-
-**Hitoshi Nakanishi** — equity long/short portfolio manager in Tokyo. My background is in physics (BSc, MSc) and machine learning (PhD).
+Equity long/short portfolio manager in Tokyo. My background is in physics (BSc, MSc) and machine learning (PhD).
 
 ## Now
 
@@ -31,11 +27,11 @@ The University of Tokyo
 - **Master’s, Experimental Particle Physics** (2015–2017) — Komamiya Lab
 - **Bachelor’s, Physics** (2011–2015)
 
-## Things I’ve made
+## Projects
 
-- [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — a desktop app that transcribes meetings and calls locally with Whisper and turns them into Markdown minutes. Audio and notes never leave your machine.
+- [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — a desktop app that transcribes meetings and calls locally with Whisper and writes Markdown minutes
 
-## Elsewhere
+## Links
 
 - GitHub: [Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)
 - LinkedIn: [in/x37](https://www.linkedin.com/in/x37/)

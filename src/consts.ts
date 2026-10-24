@@ -1,6 +1,6 @@
 // サイト全体の設定。紹介文などの言語ごとの文言は src/i18n.ts にあります。
 export const SITE = {
-  title: 'Notebook',
+  title: 'Hitoshi Nakanishi',
   author: 'Hitoshi Nakanishi',
   since: 2026,
   github: 'https://github.com/Hitoshi-Nakanishi',

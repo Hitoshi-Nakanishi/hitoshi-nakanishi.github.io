@@ -24,7 +24,7 @@ const other = otherLang(lang);
 const description = Astro.props.description ?? t.description;
 const alternate = Astro.props.alternate === undefined ? url(current.path, other) : Astro.props.alternate;
 
-const pageTitle = title ? `${title} — ${SITE.title}` : `${SITE.title} — ${t.tagline}`;
+const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
 ---

@@ -6,8 +6,7 @@ export const LANG_SHORT: Record<Lang, string> = { ja: 'JA', en: 'EN' };
 
 export const ui = {
   ja: {
-    tagline: '考えたことを、書きとめておく場所',
-    description: '日々の思考、数式、写真を書きとめる個人のノート。',
+    description: 'Hitoshi Nakanishi のブログ',
     skip: '本文へ移動',
     mainNav: 'メイン',
     themeToggle: 'ライト／ダーク切り替え',
@@ -27,8 +26,7 @@ export const ui = {
     tagDesc: (tag: string) => `「${tag}」タグの記事`,
   },
   en: {
-    tagline: 'A place to write down what I think',
-    description: 'A personal notebook of thoughts, equations and pictures.',
+    description: 'Blog by Hitoshi Nakanishi',
     skip: 'Skip to content',
     mainNav: 'Main',
     themeToggle: 'Toggle light / dark',

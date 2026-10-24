@@ -1,6 +1,8 @@
-# Notebook
+# hitoshi-nakanishi.github.io
 
-考えたことを書きとめるための個人ブログ。[Astro](https://astro.build) で作り、GitHub Pages で公開します。
+個人ブログ。[Astro](https://astro.build) で作り、GitHub Pages で公開しています。
+
+書き方の見本は `src/content/posts/formatting-sample/`（`draft: true` なので公開されず、`npm run dev` のときだけ表示されます）。
 
 - Markdown で記事を書く
 - 数式（KaTeX）: `$...$` と `$$...$$`

@@ -3,15 +3,11 @@ layout: ../layouts/PageLayout.astro
 lang: ja
 title: About
 kicker: About
-heading: このノートについて
-description: Hitoshi Nakanishi のプロフィールと、このノートについて。
+heading: Hitoshi Nakanishi
+description: Hitoshi Nakanishi のプロフィール
 ---
 
-考えたことのメモです。数式や図を使うこともあります。
-
-## 書いている人
-
-**Hitoshi Nakanishi** — 東京でエクイティ・ロング／ショート運用のポートフォリオマネージャーをしています。専門は物理学（学部・修士）と機械学習（博士）です。
+東京でエクイティ・ロング／ショート運用のポートフォリオマネージャーをしています。専門は物理学（学部・修士）と機械学習（博士）です。
 
 ## いま
 
@@ -33,7 +29,7 @@ description: Hitoshi Nakanishi のプロフィールと、このノートにつ�
 
 ## つくったもの
 
-- [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — 会議や通話の音声をローカルの Whisper で文字起こしし、Markdown の議事録にまとめるデスクトップアプリ。音声もメモも手元のマシンから外に出ません。
+- [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — 会議や通話の音声をローカルの Whisper で文字起こしし、Markdown の議事録にするデスクトップアプリ
 
 ## リンク
 
