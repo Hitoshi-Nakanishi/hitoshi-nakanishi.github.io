@@ -31,6 +31,28 @@ description: Hitoshi Nakanishi のプロフィール
 
 - [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — 会議や通話の音声をローカルの Whisper で文字起こしし、Markdown の議事録にするデスクトップアプリ
 
+## 好きなもの
+
+- ゴッホの、花瓶に生けたバラの絵
+- 曜変天目茶碗のような、きれいな茶碗
+- 大学の構内にいるのら猫
+- 育てているアボカド
+
+### 食べものと飲みもの
+
+- レモン、ブルーベリー
+- 厚岸のシングルモルトウイスキー「啓蟄」
+
+### 映画
+
+- フォレスト・ガンプ
+- ビューティフル・マインド
+
+### ガーデニング
+
+- レモン、ブルーベリー、びわ、山椒、わさび
+- アボカド（15 本）
+
 ## リンク
 
 - GitHub: [Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)

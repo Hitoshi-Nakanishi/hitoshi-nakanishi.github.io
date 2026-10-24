@@ -31,6 +31,28 @@ The University of Tokyo
 
 - [**Lethe**](https://github.com/Hitoshi-Nakanishi/lethe-app) — a desktop app that transcribes meetings and calls locally with Whisper and writes Markdown minutes
 
+## Things I like
+
+- Van Gogh’s painting of roses in a vase
+- Beautiful tea bowls, such as yohen tenmoku
+- The stray cats on the university campus
+- The avocados I’m growing
+
+### Food and drink
+
+- Lemons and blueberries
+- Akkeshi single malt whisky “Keichitsu”
+
+### Films
+
+- *Forrest Gump*
+- *A Beautiful Mind*
+
+### Gardening
+
+- Lemon, blueberry, loquat, sansho (Japanese pepper) and wasabi
+- Avocado (15 plants)
+
 ## Links
 
 - GitHub: [Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)
