@@ -22,8 +22,8 @@
   --sans: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', ui-rounded, system-ui, sans-serif;
   --mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
 
-  --measure: 40rem;
-  --wide: 52rem;
+  --measure: 46rem;
+  --wide: 60rem;
   --gutter: clamp(1rem, 4vw, 2rem);
 
   color-scheme: light;
@@ -79,6 +79,7 @@
 }
 
 html {
+  font-size: clamp(100%, 0.75rem + 0.3125vw, 112.5%);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -410,6 +411,12 @@ a:hover {
   }
   .site-header--hero nav ul {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .site-header--hero .site-header__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
   }
 }
 
