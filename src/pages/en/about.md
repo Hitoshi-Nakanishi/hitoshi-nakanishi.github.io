@@ -86,7 +86,7 @@ The University of Tokyo
 
 ## About this blog
 
-I write about things I have been thinking about or looking into. The main topics are financial data analysis, local LLMs, GPUs and the tools I am building.
+I write about things I have been thinking about or looking into. There is no fixed topic.
 
 Posts are written in Japanese and English. Some posts exist in only one of the two.
 
