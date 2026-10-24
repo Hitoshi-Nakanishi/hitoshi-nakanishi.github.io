@@ -61,6 +61,7 @@ The University of Tokyo
 - [Gradska kavana Arsenal](https://www.google.com/maps/search/?api=1&query=Gradska+kavana+Arsenal+Pred+dvorom+1+Dubrovnik) (Dubrovnik, Croatia)
 - [Noble House](https://www.google.com/maps/place/Noble+House/@3.1449417,101.7201089,17z/data=!4m6!3m5!1s0x31cc3631be7c4645:0x4be607998ed9333b!8m2!3d3.1449417!4d101.7201089!16s%2Fg%2F1tfcqr2_) (Kuala Lumpur, Malaysia)
 - [Trishna](https://www.google.com/maps/place/Trishna/@18.9248435,72.8393365,15.54z/data=!4m6!3m5!1s0x3be7d13c1abc5e8d:0x35306f3e0fd872bb!8m2!3d18.9286299!4d72.8324035!16s%2Fg%2F11g_yh3yf9) (Mumbai, India)
+- [Pratap’s The Dhaba](https://www.google.com/maps/search/?api=1&query=Pratap%27s+The+Dhaba+Veera+Desai+Rd+Andheri+West+Mumbai) (Mumbai, India)
 
 ### Places I remember
 
