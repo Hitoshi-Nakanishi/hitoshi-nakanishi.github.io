@@ -1,0 +1,90 @@
+---
+// Roses in a jug, a lemon, half an avocado and a cat, on one table.
+const spiral = 'M-1.5 0a1.5 1.5 0 0 1 3 0a3 3 0 0 1-6 0a4.5 4.5 0 0 1 9 0a6 6 0 0 1-12 0a7.5 7.5 0 0 1 15 0';
+const leaf = 'M0 0Q9-6.5 19 0Q9 6.5 0 0Z';
+const tail = 'M262 136C276 138 282 130 278 120C276 115 279 110.5 283.5 111.5';
+
+const leaves = [
+  [72, 74, -165],
+  [84, 74, -15],
+  [64, 54, -150],
+  [92, 52, -30],
+  [76, 40, -110],
+  [82, 40, -70],
+  [58, 70, 160],
+  [98, 70, 20],
+];
+const roses = [
+  [62, 50, 9.5, '#eab0b9'],
+  [96, 46, 9, '#f5dcdd'],
+  [79, 46, 12.5, '#f2c9cf'],
+  [66, 66, 12, '#f6e1e1'],
+  [91, 65, 12, '#e8a9b3'],
+  [79, 78, 8.5, '#f2c9cf'],
+];
+---
+
+<svg class="still-life" viewBox="36 24 262 120" aria-hidden="true">
+  <defs>
+    <radialGradient id="avocado-flesh" cx="50%" cy="62%" r="60%">
+      <stop offset="0.35" stop-color="#eeedb4"></stop>
+      <stop offset="1" stop-color="#b9cc63"></stop>
+    </radialGradient>
+  </defs>
+
+  <path class="still-life__table" d="M40 138.5Q110 136.8 170 138.4T294 138"></path>
+
+  <g class="still-life__ink">
+    <g fill="#5f8c40">
+      {leaves.map(([x, y, a]) => <path d={leaf} transform={`translate(${x} ${y}) rotate(${a})`}></path>)}
+    </g>
+
+    <path
+      d="M65 87C70 89 70 93 68 97C58 105 56 126 64 138H92C100 126 98 105 88 97C86 93 86 89 91 87Z"
+      fill="#ece3c8"></path>
+    <path d="M59.5 117Q78 122 96.5 117" fill="none" stroke="#6f93ad" stroke-width="2.2"></path>
+
+    {
+      roses.map(([x, y, r, fill]) => (
+        <g transform={`translate(${x} ${y}) scale(${Number(r) / 12})`}>
+          <circle r="12" fill={fill} />
+          <path d={spiral} fill="none" stroke="#b9606f" vector-effect="non-scaling-stroke" />
+        </g>
+      ))
+    }
+
+    <path d="M121 127C126 111 154 111 159 127C154 141 126 141 121 127Z" fill="#f2d24a"></path>
+    <path d="M121 127l-2.6-.6M159 127l2.6-.6" fill="none"></path>
+    <path d={leaf} transform="translate(148 116) rotate(-35) scale(.75)" fill="#5f8c40"></path>
+    <path d="M131 121q4-4 10-4.5" fill="none" stroke="#fbf0b8" stroke-width="2" stroke-linecap="round"></path>
+
+    <path
+      d="M192 92C184 92 181 102 180 110C172 120 174 138 192 138S212 120 204 110C203 102 200 92 192 92Z"
+      fill="#3f5a2a"></path>
+    <path
+      d="M192 96.5C186.5 96.5 185 104 184 111.5C177 120 178.5 134.5 192 134.5S207 120 200 111.5C199 104 197.5 96.5 192 96.5Z"
+      fill="url(#avocado-flesh)"
+      stroke="none"></path>
+    <circle cx="192" cy="121" r="8.5" fill="#8b5a37"></circle>
+    <ellipse cx="189.5" cy="118" rx="2.4" ry="1.6" fill="#b98457" stroke="none"></ellipse>
+
+    <g class="still-life__cat">
+      <path class="still-life__tail" d={tail} fill="none" stroke="#2c3a27" stroke-width="7"></path>
+      <path class="still-life__tail" d={tail} fill="none" stroke="#dc9a58" stroke-width="4.2"></path>
+      <path d="M236 138C232 124 236 108 250 104C264 108 268 124 264 138Z" fill="#dc9a58"></path>
+      <path d="M246 138v-9M254 138v-9" fill="none"></path>
+      <path d="M238.5 92L239.5 77.5L247.5 85ZM261.5 92L260.5 77.5L252.5 85Z" fill="#dc9a58"></path>
+      <ellipse cx="250" cy="95" rx="13" ry="11.5" fill="#dc9a58"></ellipse>
+      <path d="M246.5 86v3.5M250 85.5v4M253.5 86v3.5" fill="none" stroke="#a9682f" stroke-width="1.3"></path>
+      <ellipse cx="245" cy="95" rx="2.7" ry="2.3" fill="#f0d45a" stroke-width="1"></ellipse>
+      <ellipse cx="255" cy="95" rx="2.7" ry="2.3" fill="#f0d45a" stroke-width="1"></ellipse>
+      <ellipse cx="245" cy="95" rx=".7" ry="1.9" fill="#2c3a27" stroke="none"></ellipse>
+      <ellipse cx="255" cy="95" rx=".7" ry="1.9" fill="#2c3a27" stroke="none"></ellipse>
+      <path d="M248.6 99.3h2.8l-1.4 1.6Z" fill="#d9808f" stroke-width=".8"></path>
+      <path
+        d="M248 102q1 1.2 2 0q1 1.2 2 0M241.5 99.5h-7M241.5 101.5l-6.5 1.8M258.5 99.5h7M258.5 101.5l6.5 1.8"
+        fill="none"
+        stroke-width=".8"></path>
+    </g>
+  </g>
+</svg>

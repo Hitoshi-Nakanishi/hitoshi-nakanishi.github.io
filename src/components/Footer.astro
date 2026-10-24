@@ -12,11 +12,19 @@ const year = new Date().getFullYear();
 const span = year > SITE.since ? `${SITE.since}–${year}` : `${SITE.since}`;
 ---
 
-<footer class="site-footer">
-  <p class="ornament" aria-hidden="true">❦</p>
+<footer class="site-footer painted">
+  <svg class="sleeping-cat" viewBox="2 6 60 32" aria-hidden="true">
+    <g stroke="#2c3a27" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M9 32C5 20 16 11 33 11C50 11 60 20 57 32Z" fill="#dc9a58"></path>
+      <path d="M57 30C55 35 30 35 21 32" fill="none" stroke-width="5.6"></path>
+      <path d="M57 30C55 35 30 35 21 32" fill="none" stroke="#dc9a58" stroke-width="3"></path>
+      <path d="M30 14q3 4 1 9M38 13.5q3 4 1 9M46 15q2.5 4 .5 8.5" fill="none" stroke="#a9682f" stroke-width="1.2"></path>
+      <path d="M6.5 20L6 9.5L12.5 15ZM20.5 18L23 8.5L26 16Z" fill="#dc9a58"></path>
+      <ellipse cx="15.5" cy="24" rx="11" ry="9" fill="#dc9a58"></ellipse>
+      <path d="M9.5 23.5q2 1.6 4 0M17.5 23.5q2 1.6 4 0M14.7 26.6h1.8l-.9 1Z" fill="none" stroke-width="1"></path>
+    </g>
+  </svg>
   <p>
-    © {span} {SITE.author} ·
-    <a href={url('/rss.xml', lang)}>RSS</a> ·
-    <a href={SITE.github}>GitHub</a>
+    © {span} {SITE.author} · <a href={url('/rss.xml', lang)}>RSS</a> · <a href={SITE.github}>GitHub</a>
   </p>
 </footer>

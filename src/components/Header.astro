@@ -1,23 +1,38 @@
 ---
+import StillLife from './StillLife.astro';
 import { NAV, SITE } from '../consts';
 import { LANG_SHORT, LANGS, ui, type Lang } from '../i18n';
-import { pagePath, url } from '../utils';
+import { pagePath, toRoman, url } from '../utils';
 
 interface Props {
   lang: Lang;
   alternate: string;
+  /** Home page: show the still life and the site title as the page heading. */
+  hero?: boolean;
 }
 
-const { lang, alternate } = Astro.props;
+const { lang, alternate, hero = false } = Astro.props;
 const t = ui[lang];
 const { path } = pagePath(Astro.url.pathname);
 const isActive = (href: string) =>
   href === '/' ? path === '/' || path.startsWith('/posts/') : path.startsWith(href);
 ---
 
-<header class="site-header">
+<header class:list={['site-header', 'painted', { 'site-header--hero': hero }]}>
   <div class="site-header__inner">
-    <a class="brand" href={url('/', lang)}>{SITE.title}</a>
+    {
+      hero ? (
+        <>
+          <StillLife />
+          <h1 class="hero-title">{SITE.title}</h1>
+          <p class="hero-est">Est. {toRoman(SITE.since)}</p>
+        </>
+      ) : (
+        <a class="brand" href={url('/', lang)}>
+          {SITE.title}
+        </a>
+      )
+    }
     <nav aria-label={t.mainNav}>
       <ul>
         {

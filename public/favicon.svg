@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    rect { fill: #f6f2e9; stroke: #8c2f39; }
-    text { fill: #8c2f39; }
-    @media (prefers-color-scheme: dark) {
-      rect { fill: #16151a; stroke: #d98b8f; }
-      text { fill: #d98b8f; }
-    }
-  </style>
-  <rect x="3" y="3" width="58" height="58" rx="10" stroke-width="3"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-style="italic">N</text>
+  <defs>
+    <radialGradient id="flesh" cx="50%" cy="62%" r="60%">
+      <stop offset="0.35" stop-color="#eeedb4"/>
+      <stop offset="1" stop-color="#b9cc63"/>
+    </radialGradient>
+  </defs>
+  <path d="M32 3C23 3 19.5 15 18 24C8 35 9.5 61 32 61S56 35 46 24C44.5 15 41 3 32 3Z" fill="#3f5a2a"/>
+  <path d="M32 8.5C25.5 8.5 23 18 21.8 26.5C13.5 36 14.5 56 32 56S50.5 36 42.2 26.5C41 18 38.5 8.5 32 8.5Z" fill="url(#flesh)"/>
+  <circle cx="32" cy="40" r="10.5" fill="#8b5a37"/>
+  <ellipse cx="28.5" cy="36.5" rx="3" ry="2" fill="#b98457"/>
 </svg>

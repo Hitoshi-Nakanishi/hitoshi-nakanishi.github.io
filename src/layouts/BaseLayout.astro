@@ -15,10 +15,11 @@ interface Props {
   type?: 'website' | 'article';
   /** URL of this page in the other language; null when there is no translation. */
   alternate?: string | null;
+  hero?: boolean;
 }
 
 const current = pagePath(Astro.url.pathname);
-const { lang = current.lang, title, image, type = 'website' } = Astro.props;
+const { lang = current.lang, title, image, type = 'website', hero = false } = Astro.props;
 const t = ui[lang];
 const other = otherLang(lang);
 const description = Astro.props.description ?? t.description;
@@ -50,14 +51,14 @@ const ogImage = image ? new URL(image, Astro.site).href : undefined;
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
 
-    <meta name="theme-color" content="#f6f2e9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#16151a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#d3dfc6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#223022" media="(prefers-color-scheme: dark)" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@400;700&display=swap"
     />
 
     <script is:inline>
@@ -69,7 +70,7 @@ const ogImage = image ? new URL(image, Astro.site).href : undefined;
   </head>
   <body>
     <a class="skip-link" href="#main">{t.skip}</a>
-    <Header lang={lang} alternate={alternate ?? url('/', other)} />
+    <Header lang={lang} alternate={alternate ?? url('/', other)} hero={hero} />
     <main id="main">
       <slot />
     </main>
