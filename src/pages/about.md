@@ -13,9 +13,9 @@ heading: このノートについて
 
 ## 書いている人
 
-**Your Name** — ここに自己紹介を書きます。`src/pages/about.md` を編集してください。
+**Hitoshi Nakanishi** — ここに自己紹介を書きます。`src/pages/about.md` を編集してください。
 
 ## 連絡先
 
-- GitHub: [github.com/](https://github.com/)
+- GitHub: [github.com/Hitoshi-Nakanishi](https://github.com/Hitoshi-Nakanishi)
 - RSS: このサイトは RSS で購読できます。

@@ -3,10 +3,10 @@ export const SITE = {
   title: 'Notebook',
   tagline: '考えたことを、書きとめておく場所',
   description: '日々の思考、数式、写真を書きとめる個人のノート。',
-  author: 'Your Name',
+  author: 'Hitoshi Nakanishi',
   since: 2026,
   lang: 'ja',
-  github: 'https://github.com/',
+  github: 'https://github.com/Hitoshi-Nakanishi',
 };
 
 export const NAV = [
