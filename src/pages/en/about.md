@@ -33,20 +33,20 @@ The University of Tokyo
 
 ## Things I like
 
-- Van Gogh’s painting of roses in a vase
-- Beautiful tea bowls, such as yohen tenmoku
+- Van Gogh’s paintings of roses in a vase, especially [the one at the National Gallery of Art in Washington](https://www.nga.gov/artworks/72328-roses). I also like [the one at the Met](https://www.metmuseum.org/art/collection/search/436534).
+- Beautiful tea bowls, such as [yohen tenmoku](https://en.wikipedia.org/wiki/Tenmoku)
 - The stray cats on the university campus
 - The avocados I’m growing
 
 ### Food and drink
 
 - Lemons and blueberries
-- Akkeshi single malt whisky “Keichitsu”
+- [Akkeshi single malt whisky “Keichitsu”](https://akkeshi-distillery.com/brand/products.html#keichitu)
 
 ### Films
 
-- *Forrest Gump*
-- *A Beautiful Mind*
+- [*Forrest Gump*](https://en.wikipedia.org/wiki/Forrest_Gump)
+- [*A Beautiful Mind*](https://en.wikipedia.org/wiki/A_Beautiful_Mind_(film))
 
 ### Gardening
 

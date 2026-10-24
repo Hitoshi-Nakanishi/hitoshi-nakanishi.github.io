@@ -33,20 +33,20 @@ description: Hitoshi Nakanishi のプロフィール
 
 ## 好きなもの
 
-- ゴッホの、花瓶に生けたバラの絵
-- 曜変天目茶碗のような、きれいな茶碗
+- ゴッホの、花瓶に生けたバラの絵。[ワシントン・ナショナル・ギャラリーの一枚](https://www.nga.gov/artworks/72328-roses)が特に好きで、[メトロポリタン美術館の一枚](https://www.metmuseum.org/art/collection/search/436534)も好きです
+- [曜変天目茶碗](https://ja.wikipedia.org/wiki/曜変天目)のような、きれいな茶碗
 - 大学の構内にいるのら猫
 - 育てているアボカド
 
 ### 食べものと飲みもの
 
 - レモン、ブルーベリー
-- 厚岸のシングルモルトウイスキー「啓蟄」
+- [厚岸のシングルモルトウイスキー「啓蟄」](https://akkeshi-distillery.com/brand/products.html#keichitu)
 
 ### 映画
 
-- フォレスト・ガンプ
-- ビューティフル・マインド
+- [フォレスト・ガンプ](https://ja.wikipedia.org/wiki/フォレスト・ガンプ/一期一会)
+- [ビューティフル・マインド](https://ja.wikipedia.org/wiki/ビューティフル・マインド)
 
 ### ガーデニング
 
