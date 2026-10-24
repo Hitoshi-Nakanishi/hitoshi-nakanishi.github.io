@@ -1,56 +1,57 @@
 ---
 title: Starting to keep notes here
-description: Notes on how this site handles Japanese and English, how it is built, and how to write posts
+description: How this site is put together, and how to write posts for it
 date: 2026-10-24
 tags: [this site]
 ---
 
-I am going to record what I think about here. This post is a note on how the site works and how to write for it.
+I've started a blog. I plan to write here about things I've been thinking about or looking into.
+
+Since this is the first post, I'm writing down how the site is put together and how posts are written. Half of it is a note to myself.
 
 ## Japanese and English
 
-Each post keeps its Japanese and English versions in the same folder.
+Posts can be written in both Japanese and English. You can switch with "JA / EN" in the top right.
+
+The Japanese and English versions of a post sit in the same folder, and they share images.
 
 ```
 src/content/posts/starting-notes/
   index.md         Japanese
   index.en.md      English
-  unit-circle.svg  image (shared by both)
+  unit-circle.svg  image
 ```
 
-- Japanese pages live under `/`, English pages under `/en/`
-- JA / EN in the top right switches language. If a post has no translation, the switch goes to the other language's home page
-- Each language's post list shows only the posts written in that language, so writing in just one language is fine
+Japanese pages are under `/` and English pages are under `/en/`. If a post has no English version, pressing EN takes you to the English home page. Each post list only shows posts written in that language, so it's fine to write a post in just one of them.
 
-New posts are created with a command:
+New posts are created with these commands:
 
 ```bash
 npm run new -- "タイトル" my-slug        # Japanese
 npm run new -- "Title" my-slug --en      # English version of the same post
 ```
 
-## How it is built
+## How the site is built
 
-- **Posts are Markdown files**: no database or CMS. Files are written by hand and kept in Git
-- **Static site**: [Astro](https://astro.build) generates HTML, hosted on GitHub Pages. Pushing to `main` makes GitHub Actions build and publish it
-- **Math is rendered at build time**: KaTeX turns it into HTML, so no JavaScript has to lay out equations in the browser
-- **Images sit next to the post**: they are optimized at build time
-- **Look**: body text in a Mincho serif (Noto Serif JP) and EB Garamond, with light and dark modes
-- **Nothing extra**: no analytics, ads or comments. RSS feeds are `/rss.xml` (Japanese) and `/en/rss.xml` (English)
+The site is a static site built with [Astro](https://astro.build) and hosted on GitHub Pages. Posts are Markdown files, and pushing to the `main` branch makes GitHub Actions build and publish the site. There is no CMS or database.
 
-## How to write
+Math is rendered with KaTeX when the site is built. Images placed in a post's folder are resized and optimized at build time.
+
+The body text uses Noto Serif JP and EB Garamond, and there's a light and a dark mode. There are no analytics, ads or comments. The RSS feeds are `/rss.xml` for Japanese and `/en/rss.xml` for English.
+
+## Writing posts
 
 ### Math
 
-Inline uses `$...$`: $e^{i\theta} = \cos\theta + i\sin\theta$
+Inline math goes between `$...$`, for example $e^{i\theta} = \cos\theta + i\sin\theta$.
 
-Display uses `$$...$$`:
+For an equation on its own line, use `$$...$$`.
 
 $$
 e^{i\pi} + 1 = 0
 $$
 
-Multiple lines use `aligned`:
+Multi-line equations can be aligned with `aligned`.
 
 $$
 \begin{aligned}
@@ -61,22 +62,17 @@ $$
 
 ### Images
 
+Write an image like this. The text in quotes becomes the caption.
+
 ```md
 ![Unit circle](./unit-circle.svg "Figure 1. The unit circle")
 ```
-
-The quoted text becomes the caption.
 
 ![Unit circle](./unit-circle.svg "Figure 1. The unit circle")
 
 ### Code
 
-````md
-```python
-import cmath
-print(abs(cmath.exp(1j * cmath.pi) + 1))
-```
-````
+Wrap code in three backticks and add the language name to get syntax highlighting.
 
 ```python
 import cmath
@@ -93,12 +89,14 @@ print(abs(cmath.exp(1j * cmath.pi) + 1))
 
 ### Quotes and footnotes
 
-> Start a line with `>` for a quote.
+Start a line with `>` for a quote.
 
-Write `[^1]` for a footnote, and put its text at the end as `[^1]: ...`[^1].
+> This is a quote.
+
+For a footnote, write `[^1]` in the text and put its content at the end of the post as `[^1]: ...`[^1].
 
 ### Drafts
 
-Add `draft: true` to the frontmatter to keep a post unpublished. It still shows up with `npm run dev`.
+Put `draft: true` in the frontmatter and the post won't be published. It still shows up when you run `npm run dev`.
 
-[^1]: This is the footnote.
+[^1]: Footnotes show up down here.
