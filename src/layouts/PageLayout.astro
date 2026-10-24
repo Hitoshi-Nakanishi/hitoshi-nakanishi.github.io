@@ -4,7 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+<BaseLayout lang={frontmatter.lang} title={frontmatter.title} description={frontmatter.description}>
   <header class="page-header">
     {frontmatter.kicker && <p class="page-kicker">{frontmatter.kicker}</p>}
     <h1 class="page-title">{frontmatter.heading ?? frontmatter.title}</h1>

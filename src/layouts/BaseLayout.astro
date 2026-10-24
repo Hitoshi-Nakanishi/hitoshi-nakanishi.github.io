@@ -4,37 +4,49 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../consts';
-import { url } from '../utils';
+import { otherLang, ui, type Lang } from '../i18n';
+import { pagePath, url } from '../utils';
 
 interface Props {
+  lang?: Lang;
   title?: string;
   description?: string;
   image?: string;
   type?: 'website' | 'article';
+  /** URL of this page in the other language; null when there is no translation. */
+  alternate?: string | null;
 }
 
-const { title, description = SITE.description, image, type = 'website' } = Astro.props;
-const pageTitle = title ? `${title} — ${SITE.title}` : `${SITE.title} — ${SITE.tagline}`;
+const current = pagePath(Astro.url.pathname);
+const { lang = current.lang, title, image, type = 'website' } = Astro.props;
+const t = ui[lang];
+const other = otherLang(lang);
+const description = Astro.props.description ?? t.description;
+const alternate = Astro.props.alternate === undefined ? url(current.path, other) : Astro.props.alternate;
+
+const pageTitle = title ? `${title} — ${SITE.title}` : `${SITE.title} — ${t.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ? new URL(image, Astro.site).href : undefined;
 ---
 
 <!doctype html>
-<html lang={SITE.lang}>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {alternate && <link rel="alternate" hreflang={other} href={new URL(alternate, Astro.site)} />}
     <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
-    <link rel="alternate" type="application/rss+xml" title={SITE.title} href={url('/rss.xml')} />
+    <link rel="alternate" type="application/rss+xml" title={SITE.title} href={url('/rss.xml', lang)} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
 
     <meta property="og:type" content={type} />
     <meta property="og:title" content={title ?? SITE.title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
 
@@ -56,11 +68,11 @@ const ogImage = image ? new URL(image, Astro.site).href : undefined;
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">本文へ移動</a>
-    <Header />
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <Header lang={lang} alternate={alternate ?? url('/', other)} />
     <main id="main">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

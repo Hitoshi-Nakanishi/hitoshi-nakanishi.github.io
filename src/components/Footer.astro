@@ -1,7 +1,13 @@
 ---
 import { SITE } from '../consts';
+import type { Lang } from '../i18n';
 import { url } from '../utils';
 
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 const year = new Date().getFullYear();
 const span = year > SITE.since ? `${SITE.since}–${year}` : `${SITE.since}`;
 ---
@@ -10,7 +16,7 @@ const span = year > SITE.since ? `${SITE.since}–${year}` : `${SITE.since}`;
   <p class="ornament" aria-hidden="true">❦</p>
   <p>
     © {span} {SITE.author} ·
-    <a href={url('/rss.xml')}>RSS</a> ·
+    <a href={url('/rss.xml', lang)}>RSS</a> ·
     <a href={SITE.github}>GitHub</a>
   </p>
 </footer>

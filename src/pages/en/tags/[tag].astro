@@ -1,0 +1,8 @@
+---
+import TagView from '../../../views/TagView.astro';
+import { getTagPaths } from '../../../utils';
+
+export const getStaticPaths = () => getTagPaths('en');
+---
+
+<TagView lang="en" {...Astro.props} />

@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { otherLang, ui } from '../i18n';
+import { formatDate, postLang, postUrl, readingMinutes, tagUrl, type Post } from '../utils';
+
+interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+  translation?: Post;
+}
+
+const { post, newer, older, translation } = Astro.props;
+const lang = postLang(post);
+const t = ui[lang];
+const { Content } = await render(post);
+const { title, description, date, updated, tags, cover, coverAlt } = post.data;
+---
+
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={description}
+  image={cover?.src}
+  type="article"
+  alternate={translation ? postUrl(translation) : null}
+>
+  <article class="post">
+    <header class="post-header">
+      <p class="post-meta">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {
+          updated && (
+            <span>
+              （{t.updated} <time datetime={updated.toISOString()}>{formatDate(updated)}</time>）
+            </span>
+          )
+        }
+        <span aria-hidden="true">·</span>
+        <span>{t.minutes(readingMinutes(post.body, lang))}</span>
+        {
+          translation && (
+            <>
+              <span aria-hidden="true">·</span>
+              <a class="post-meta__translation" href={postUrl(translation)} hreflang={otherLang(lang)}>
+                {ui[otherLang(lang)].readIn}
+              </a>
+            </>
+          )
+        }
+      </p>
+      <h1 class="post-title">{title}</h1>
+      {description && <p class="post-lede">{description}</p>}
+      {
+        tags.length > 0 && (
+          <ul class="tag-row tag-row--center">
+            {tags.map((tag) => (
+              <li>
+                <a href={tagUrl(tag, lang)}>#{tag}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    {
+      cover && (
+        <figure class="post-cover">
+          <Image src={cover} alt={coverAlt ?? ''} widths={[720, 1200]} sizes="(max-width: 760px) 100vw, 720px" />
+        </figure>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <p class="ornament" aria-hidden="true">⁂</p>
+
+    <nav class="post-nav" aria-label={t.postNav}>
+      {
+        older ? (
+          <a class="post-nav__link" href={postUrl(older)}>
+            <span class="post-nav__label">{t.older}</span>
+            <span class="post-nav__title">{older.data.title}</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      {
+        newer && (
+          <a class="post-nav__link post-nav__link--next" href={postUrl(newer)}>
+            <span class="post-nav__label">{t.newer}</span>
+            <span class="post-nav__title">{newer.data.title}</span>
+          </a>
+        )
+      }
+    </nav>
+  </article>
+</BaseLayout>

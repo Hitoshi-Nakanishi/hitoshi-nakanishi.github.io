@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { SITE } from '../consts';
+import { ui, type Lang } from '../i18n';
+import { getPosts, toRoman } from '../utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const posts = await getPosts(lang);
+---
+
+<BaseLayout lang={lang}>
+  <section class="masthead">
+    <p class="masthead__est">Est. {toRoman(SITE.since)}</p>
+    <h1 class="masthead__title">{SITE.title}</h1>
+    <p class="masthead__tagline">{t.tagline}</p>
+    <div class="masthead__rule" aria-hidden="true"><span>✦</span></div>
+  </section>
+
+  {posts.length > 0 ? <PostList posts={posts} /> : <p class="empty">{t.empty}</p>}
+</BaseLayout>

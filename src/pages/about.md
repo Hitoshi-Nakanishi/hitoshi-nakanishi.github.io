@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/PageLayout.astro
+lang: ja
 title: About
 kicker: About
 heading: このノートについて

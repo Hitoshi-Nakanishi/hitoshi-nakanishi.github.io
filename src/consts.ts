@@ -1,11 +1,8 @@
-// サイト全体の設定。ここを書き換えるだけでタイトルや紹介文が変わります。
+// サイト全体の設定。紹介文などの言語ごとの文言は src/i18n.ts にあります。
 export const SITE = {
   title: 'Notebook',
-  tagline: '考えたことを、書きとめておく場所',
-  description: '日々の思考、数式、写真を書きとめる個人のノート。',
   author: 'Hitoshi Nakanishi',
   since: 2026,
-  lang: 'ja',
   github: 'https://github.com/Hitoshi-Nakanishi',
 };
 

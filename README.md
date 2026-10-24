@@ -28,6 +28,19 @@ npm run new -- "記事のタイトル"
 npm run new -- "記事のタイトル" my-first-post
 ```
 
+### 日本語と英語
+
+同じフォルダに `index.md`（日本語）と `index.en.md`（英語）を置くと、同じ記事の 2 つの言語版になります。画像はフォルダ内で共有されます。
+
+```bash
+npm run new -- "Post title" my-first-post --en
+```
+
+- 日本語ページは `/`、英語ページは `/en/` の下に出ます
+- ページ右上の **JA / EN** で切り替え。翻訳がない記事では、もう一方の言語のトップへ移動します
+- 一覧には、その言語で書かれた記事だけが並びます。片方の言語だけで書いても大丈夫です
+- サイトの紹介文やボタンの文言は `src/i18n.ts` にあります
+
 ### フロントマター
 
 ```yaml
@@ -79,7 +92,8 @@ $$
 
 | 変えたいもの | ファイル |
 | --- | --- |
-| サイト名・紹介文・著者名 | `src/consts.ts` |
-| About ページ | `src/pages/about.md` |
+| サイト名・著者名 | `src/consts.ts` |
+| 紹介文・ボタンなどの文言（日英） | `src/i18n.ts` |
+| About ページ | `src/pages/about.md`（英語: `src/pages/en/about.md`） |
 | 色・フォント・余白 | `src/styles/global.css`（先頭の `:root` に色がまとまっている） |
 | ファビコン | `public/favicon.svg` |

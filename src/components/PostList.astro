@@ -1,5 +1,5 @@
 ---
-import { formatDate, postUrl, tagUrl, type Post } from '../utils';
+import { formatDate, postLang, postUrl, tagUrl, type Post } from '../utils';
 
 interface Props {
   posts: Post[];
@@ -25,7 +25,7 @@ const { posts } = Astro.props;
             <ul class="tag-row">
               {post.data.tags.map((tag) => (
                 <li>
-                  <a href={tagUrl(tag)}>#{tag}</a>
+                  <a href={tagUrl(tag, postLang(post))}>#{tag}</a>
                 </li>
               ))}
             </ul>

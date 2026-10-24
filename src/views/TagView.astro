@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { otherLang, ui, type Lang } from '../i18n';
+import { url, type Post } from '../utils';
+
+interface Props {
+  lang: Lang;
+  tag: string;
+  posts: Post[];
+}
+
+const { lang, tag, posts } = Astro.props;
+const t = ui[lang];
+---
+
+<BaseLayout lang={lang} title={`#${tag}`} description={t.tagDesc(tag)} alternate={url('/tags/', otherLang(lang))}>
+  <header class="page-header">
+    <p class="page-kicker"><a href={url('/tags/', lang)}>Tags</a></p>
+    <h1 class="page-title">#{tag}</h1>
+    <p class="page-sub">{t.count(posts.length)}</p>
+  </header>
+  <PostList posts={posts} />
+</BaseLayout>
