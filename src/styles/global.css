@@ -604,6 +604,8 @@ a:hover {
   margin: 1rem auto 0;
   font-style: italic;
   color: var(--ink-soft);
+  word-break: auto-phrase;
+  text-wrap: balance;
 }
 
 .post-cover {
